@@ -2,11 +2,11 @@
 
 import UIKit
 
-let numbers = [1, 2, 4, 6, 8, 9, 11, 13, 16, 17, 20]
+ let numbers = [1, 2, 4, 6, 8, 9, 11, 13, 16, 17, 20]
 
-var hundred = [Int]()
+var oneHundred = [Int]()
 for i in 1...100 {
-    hundred.append(i)
+    oneHundred.append(i)
 }
 
 func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
@@ -37,8 +37,10 @@ func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
     return false
 }
 
-print(binarySearchForSearchValue(searchValue: 33, array: hundred))
+print(binarySearchForSearchValue(searchValue: 33, array: oneHundred))
 
+
+// Linear search:
 
 //func linearSearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
 //    for num in array {

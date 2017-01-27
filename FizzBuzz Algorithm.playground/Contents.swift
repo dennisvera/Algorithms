@@ -4,14 +4,12 @@ import UIKit
 
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ,13 ,14, 15]
 
-//let oneThousandNumbers = 1...1000
-
-var oneThousandNumbers = [Int]()
-for i in 1...1000 {
-    oneThousandNumbers.append(i)
+var oneHundredNumbers = [Int]()
+for i in 1...100 {
+    oneHundredNumbers.append(i)
 }
 
-for num in oneThousandNumbers {
+for num in oneHundredNumbers {
     if num % 3 == 0 && num % 5 == 0 {
        print("\(num) fizzbuzz")
         
