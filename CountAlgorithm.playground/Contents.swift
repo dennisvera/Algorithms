@@ -29,7 +29,6 @@ func mostCommonNameInArray(array: [String]) -> String {
         }
         print("\(key): \(nameCountDictionary[key]!)")
     }
-    
     return mostCommonName
 }
 
