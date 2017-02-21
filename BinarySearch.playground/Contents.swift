@@ -2,8 +2,6 @@
 
 import UIKit
 
- let numbers = [1, 2, 4, 6, 8, 9, 11, 13, 16, 17, 20]
-
 var oneHundred = [Int]()
 for i in 1...100 {
     oneHundred.append(i)
@@ -40,18 +38,20 @@ func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
 print(binarySearchForSearchValue(searchValue: 33, array: oneHundred))
 
 
+/*
 // Linear search:
+let numbers = [1, 2, 4, 6, 8, 9, 11, 13, 16, 17, 20]
 
-//func linearSearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
-//    for num in array {
-//        if num == searchValue {
-//            return true
-//        }
-//    }
-//    return false
-//}
-//
-//print(linearSearchForSearchValue(searchValue: 20, array: numbers))
+func linearSearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
+    for num in array {
+        if num == searchValue {
+            return true
+        }
+    }
+    return false
+}
 
+print(linearSearchForSearchValue(searchValue: 20, array: numbers))
+*/
 
 

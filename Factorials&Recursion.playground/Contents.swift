@@ -2,6 +2,7 @@
 
 import UIKit
 
+//Factorial
 func factorialOfValue(value: UInt) -> UInt {
     
     if value == 0 {
@@ -12,14 +13,13 @@ func factorialOfValue(value: UInt) -> UInt {
     for i in 1...value {
         product = product * i
     }
-    
+
     return product
 }
 
-//print(factorialOfValue(value: 3))
-//factorialOfValue(value: 5)
+factorialOfValue(value: 5)
 
-
+//Recursive Factorial
 func recursiveFactorialOfValue(value: UInt) -> UInt {
     
     if value == 0 {
@@ -27,10 +27,9 @@ func recursiveFactorialOfValue(value: UInt) -> UInt {
     }
     
     print(value)
-    
     return value * recursiveFactorialOfValue(value: value - 1)
 }
 
-recursiveFactorialOfValue(value: 4)
+recursiveFactorialOfValue(value: 5)
 
 
