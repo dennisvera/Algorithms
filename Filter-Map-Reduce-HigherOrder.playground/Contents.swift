@@ -9,13 +9,14 @@ let numbers = [1, 2, 3, 4, 3, 3]
 
 let filteredThreeNumbers = numbers.filter({return $0 == 3})
 let divisibleByTwoFiltered = numbers.filter({return $0 % 2 == 0})
-print("There are \(filteredThreeNumbers) number(s) 3 in this array, and \(divisibleByTwoFiltered) divisible numbers by 2.")
+print("There are \(filteredThreeNumbers) number 3 in this array, and \(divisibleByTwoFiltered) divisible numbers by 2.")
 
 
 //2. transfrom [1, 2, 3, 4] -> [2, 4, 6, 8] using map
 
 let transformedNumbers = [1, 2, 3, 4].map({return $0 * 2})
 print(transformedNumbers)
+
 
 //3. sum [1, 2, 3, 4] -> 10 using reduce
 
@@ -40,7 +41,7 @@ for number in numbers {
         }
     }
 }
-print("There are \(filteredNumbers) number(s) 3 in this array, and \(divisibleByTwoNumbers) divisible numbers by 2.")
+print("There are \(filteredNumbers) number 3 in this array, and \(divisibleByTwoNumbers) divisible numbers by 2.")
 
 
 //2. transfrom [1, 2, 3, 4] -> [2, 4, 6, 8] using map
