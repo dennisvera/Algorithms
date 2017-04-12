@@ -2,7 +2,7 @@
 
 import UIKit
 
-let sampleSentence = "Lets remove every other word in this sentence and also create an extension to remove all the vowels"
+let sampleSentence = "Programming is so much fun!"
 
 func reverseWordsInSentence(sentence: String) -> String {
     
@@ -37,3 +37,5 @@ extension String {
 }
 
 print(reverseWordsInSentence(sentence: sampleSentence))
+
+

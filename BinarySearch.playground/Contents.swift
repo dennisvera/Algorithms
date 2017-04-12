@@ -2,12 +2,14 @@
 
 import UIKit
 
-var oneHundred = [Int]()
+let numbers = [1, 2, 4, 6, 8, 9, 11, 13, 16, 17, 20]
+
+var hundred = [Int]()
 for i in 1...100 {
-    oneHundred.append(i)
+    hundred.append(i)
 }
 
-func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
+func binarySearchFor(searchValue: Int, array: [Int]) -> Bool {
     
     var leftIndex = 0
     var rightIndex = array.count - 1
@@ -17,7 +19,7 @@ func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
         let middleIndex = (leftIndex + rightIndex) / 2
         let middleValue = array[middleIndex]
         
-        print("middleValue: \(middleValue), leftIndex: \(leftIndex), rightIndex: \(rightIndex), [\(array[leftIndex]) - \(array[rightIndex])]")
+        print("middleValue: \(middleValue), leftIndex: \(leftIndex), rightIndex: \(rightIndex), [\(array[leftIndex]), \(array[rightIndex])]")
         
         if middleValue == searchValue {
             return true
@@ -35,14 +37,13 @@ func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
     return false
 }
 
-print(binarySearchForSearchValue(searchValue: 33, array: oneHundred))
+print(binarySearchFor(searchValue: 33, array: hundred))
 
 
 /*
-// Linear search:
-let numbers = [1, 2, 4, 6, 8, 9, 11, 13, 16, 17, 20]
-
-func linearSearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
+// Linear search answer
+func linearSearchFor(searchValue: Int, array: [Int]) -> Bool {
+    
     for num in array {
         if num == searchValue {
             return true
@@ -51,7 +52,5 @@ func linearSearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
     return false
 }
 
-print(linearSearchForSearchValue(searchValue: 20, array: numbers))
+print(linearSearchFor(searchValue: 9, array: numbers))
 */
-
-
