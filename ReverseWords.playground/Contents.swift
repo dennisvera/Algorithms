@@ -2,9 +2,11 @@
 
 import UIKit
 
-let sampleSentence = "Programming is so much fun!"
+// Reverse every other word algorithm
 
-func reverseWordsInSentence(sentence: String) -> String {
+let sentence = "Lets start today by completing a very interesting challenge"
+
+func reverseWordsIn(sentence: String) -> String {
     
     let allWords = sentence.components(separatedBy: " ")
     var newSentence = ""
@@ -14,7 +16,6 @@ func reverseWordsInSentence(sentence: String) -> String {
         if newSentence != "" {
             newSentence += " "
         }
-        
         if index % 2 == 1 {
             let reverseWord = String(word.characters.reversed())
             newSentence += reverseWord.stringByRemovingVowels()
@@ -22,20 +23,22 @@ func reverseWordsInSentence(sentence: String) -> String {
             newSentence += word.stringByRemovingVowels()
         }
     }
+    
     return newSentence
 }
 
-//remove all vowels from sampleSentence
+// Remove vowels in sentence algorithm
+
 extension String {
     func stringByRemovingVowels() -> String {
         var newWord = self
         for vowel in ["a", "e", "i", "o", "u"] {
             newWord = newWord.replacingOccurrences(of: vowel, with: "")
         }
+        
         return newWord
     }
 }
 
-print(reverseWordsInSentence(sentence: sampleSentence))
 
-
+print(reverseWordsIn(sentence: sentence))
