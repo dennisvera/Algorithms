@@ -9,6 +9,8 @@ for i in 1...100 {
     hundred.append(i)
 }
 
+// Binary search answer
+
 func binarySearchFor(searchValue: Int, array: [Int]) -> Bool {
     
     var leftIndex = 0
@@ -40,8 +42,8 @@ func binarySearchFor(searchValue: Int, array: [Int]) -> Bool {
 print(binarySearchFor(searchValue: 33, array: hundred))
 
 
-/*
 // Linear search answer
+
 func linearSearchFor(searchValue: Int, array: [Int]) -> Bool {
     
     for num in array {
@@ -53,4 +55,6 @@ func linearSearchFor(searchValue: Int, array: [Int]) -> Bool {
 }
 
 print(linearSearchFor(searchValue: 9, array: numbers))
-*/
+
+
+
