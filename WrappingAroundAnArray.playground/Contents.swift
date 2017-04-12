@@ -2,35 +2,35 @@
 
 import UIKit
 
-//assume you have a list of tracks
+// Wrapp around array alogorithm
+
+
+// Assume we have a list of tracks
 let tracks = ["a", "b", "c", "d", "e"]
 
-//algorithm should return this playlist if we select track "d"
+// Algorithm should return this playlist if we select track "d"
 ["d", "e", "a", "b", "c"]
 
-let selectedTrack = "d"
-
 var playlist = [String]()
+let selectedtrack = "d"
 var priorTracks = [String]()
 
 for track in tracks {
-    if track == selectedTrack || playlist.count > 0 {
+    if track == selectedtrack || playlist.count > 0 {
         playlist.append(track)
-    
     } else {
         priorTracks.append(track)
     }
 }
 
-priorTracks
-playlist
-
-playlist + priorTracks
+print(playlist + priorTracks)
 
 
-//another technique to wrapp the array
-let index = tracks.index(where: {return $0 == selectedTrack})
+// Solving algorithm with prefix & suffix
+
+let index = tracks.index(where: {return $0 == selectedtrack})
 let prefixArray = tracks.prefix(upTo: index!)
 let suffixArray = tracks.suffix(from: index!)
+let playlistArray = suffixArray + prefixArray
 
-let array = suffixArray + prefixArray
+print(playlistArray)
