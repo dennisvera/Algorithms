@@ -47,7 +47,6 @@ let filteredDivbleByTwo = numbers.filter({return $0 % 2 == 0})
 filteredThree
 filteredDivbleByTwo
 
-
 // 2. transfrom [1, 2, 3, 4] -> [2, 4, 6, 8] using map
 
 let transformed = [1, 2, 3, 4].map({return $0 * 2})
@@ -57,8 +56,5 @@ transformed
 
 let sum = [1, 2, 3, 4].reduce(0, {sum, number in sum + number})
 sum
-
-
-
 
 
