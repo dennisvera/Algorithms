@@ -23,7 +23,7 @@ func binarySearchFor(searchValue: Int, array: [Int]) -> Bool {
         
         print("middleValue: \(middleValue), leftIndex: \(leftIndex), rightIndex: \(rightIndex), [\(array[leftIndex]), \(array[rightIndex])]")
         
-        if middleValue == searchValue {
+        if searchValue == middleValue {
             return true
         }
         
