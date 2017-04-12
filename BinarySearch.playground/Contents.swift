@@ -9,7 +9,7 @@ for i in 1...100 {
     hundred.append(i)
 }
 
-// Binary search answer
+// Binary search algorithm
 
 func binarySearchFor(searchValue: Int, array: [Int]) -> Bool {
     
@@ -42,7 +42,7 @@ func binarySearchFor(searchValue: Int, array: [Int]) -> Bool {
 print(binarySearchFor(searchValue: 33, array: hundred))
 
 
-// Linear search answer
+// Linear search algorithm
 
 func linearSearchFor(searchValue: Int, array: [Int]) -> Bool {
     

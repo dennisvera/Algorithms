@@ -2,7 +2,7 @@
 
 import UIKit
 
-// Factorial Algorithm
+// Factorial algorithm
 
 func factorialOf(value: Int) -> Int {
     
@@ -18,7 +18,7 @@ func factorialOf(value: Int) -> Int {
     return product
 }
 
-// Recursive Factorial Algorithm
+// Recursive-Factorial algorithm
 
 func recursiveFactorialOf(value: Int) -> Int {
     
@@ -29,9 +29,6 @@ func recursiveFactorialOf(value: Int) -> Int {
     return value * recursiveFactorialOf(value: value - 1)
 }
 
-
 print(recursiveFactorialOf(value: 5))
 print(factorialOf(value: 5))
-
-
 

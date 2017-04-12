@@ -2,6 +2,8 @@
 
 import UIKit
 
+// FizzBuzz algorithm 
+
 var oneHundred = [Int]()
 for i in 1...100 {
     oneHundred.append(i)
