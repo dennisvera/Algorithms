@@ -2,6 +2,8 @@
 
 import UIKit
 
+// Retain Cycle (memory management)
+
 class Person {
     let name: String
     var apartment: Apartment?
@@ -27,7 +29,6 @@ class Apartment {
     }
 }
 
-
 var bob: Person? = Person(name: "Bob")
 var apt: Apartment? = Apartment(number: 123)
 apt?.tenant = bob
@@ -35,6 +36,4 @@ bob?.apartment = apt
 
 bob = nil
 apt = nil
-
-
 
