@@ -2,7 +2,6 @@
 
 import UIKit
 
-
 // Fibonacci sequence algorithm
 
 func fibonnacciFor(numSteps: Int) -> [Int] {
@@ -35,3 +34,5 @@ func fibonnacciRecursionFor(numSteps: Int, first: Int, second: Int) -> [Int] {
 }
 
 print([0, 1] + fibonnacciRecursionFor(numSteps: 9, first: 0, second: 1))
+
+
