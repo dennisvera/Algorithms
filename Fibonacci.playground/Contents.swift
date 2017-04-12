@@ -2,8 +2,12 @@
 
 import UIKit
 
-func fibNumSteps(numSteps: Int) -> [Int] {
+
+// Fibonacci sequence algorithm
+
+func fibonnacciFor(numSteps: Int) -> [Int] {
     var sequence = [0, 1]
+    
     if numSteps <= 1 {
         return sequence
     }
@@ -17,17 +21,17 @@ func fibNumSteps(numSteps: Int) -> [Int] {
     return sequence
 }
 
-fibNumSteps(numSteps: 8)
+print(fibonnacciFor(numSteps: 10))
 
-/*
-//recursive fibonacci - NOT WORKING
-func fibRecursionForNumSteps(numSteps: Int, first: Int, second: Int) -> [Int] {
+
+// Fibonnacci recursive algorithm
+
+func fibonnacciRecursionFor(numSteps: Int, first: Int, second: Int) -> [Int] {
     if numSteps == 0 {
         return []
     }
-    print(first, second)
-    return [first + second] + fibRecursionForNumSteps(numSteps: numSteps - 1, first: second, second: first + second)
+    
+    return [first + second] + fibonnacciRecursionFor(numSteps: numSteps - 1, first: second, second: first + second)
 }
 
-[0, 1] + fibRecursionForNumSteps(numSteps: 9, first: 0, second: 1)
-*/
+print([0, 1] + fibonnacciRecursionFor(numSteps: 9, first: 0, second: 1))
