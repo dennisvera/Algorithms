@@ -2,34 +2,36 @@
 
 import UIKit
 
-//Factorial
-func factorialOfValue(value: UInt) -> UInt {
+// Factorial Algorithm
+
+func factorialOf(value: Int) -> Int {
     
     if value == 0 {
         return 1
     }
     
-    var product: UInt = 1
+    var product: Int = 1
     for i in 1...value {
         product = product * i
     }
-
+    
     return product
 }
 
-factorialOfValue(value: 5)
+// Recursive Factorial Algorithm
 
-//Recursive Factorial
-func recursiveFactorialOfValue(value: UInt) -> UInt {
+func recursiveFactorialOf(value: Int) -> Int {
     
     if value == 0 {
         return 1
     }
     
-    print(value)
-    return value * recursiveFactorialOfValue(value: value - 1)
+    return value * recursiveFactorialOf(value: value - 1)
 }
 
-recursiveFactorialOfValue(value: 5)
+
+print(recursiveFactorialOf(value: 5))
+print(factorialOf(value: 5))
+
 
 
