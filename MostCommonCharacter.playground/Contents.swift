@@ -5,7 +5,7 @@ import UIKit
 
 // Find most common character in sentence
 
-let sentence = "doggy doooyyy"
+let sentence = "buddy is my favorite little doggy"
 
 func findMostCommonCharacterIn(sentence: String) -> String {
     
@@ -23,13 +23,11 @@ func findMostCommonCharacterIn(sentence: String) -> String {
         }
     }
     
-    for (key,value) in (Array(characterDict).sorted {$0.1 < $1.1}) {
+    for (key,value) in (Array(characterDict).sorted { $0.1 < $1.1 }) {
         mostCommonCharacter = "\(key): \(value)"
-
     }
     
     return mostCommonCharacter
-
 }
 
 print(findMostCommonCharacterIn(sentence: sentence))
