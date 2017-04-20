@@ -5,7 +5,7 @@ import UIKit
 
 // Find most common character in sentence
 
-let sentence = "buddy is my favorite little doggy"
+let sentence = "Oceans free-fall Waves interweave Patterns Dizzy space Sound ball Soft birthColours congeal'ectricity"
 
 func findMostCommonCharacterIn(sentence: String) -> String {
     
