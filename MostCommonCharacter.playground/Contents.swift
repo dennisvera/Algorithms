@@ -30,6 +30,6 @@ func findMostCommonCharacterIn(sentence: String) -> String {
     return mostCommonCharacter
 }
 
-print(findMostCommonCharacterIn(sentence: sentence))
 
+print(findMostCommonCharacterIn(sentence: sentence))
 
