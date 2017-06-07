@@ -2,7 +2,6 @@
 
 import UIKit
 
-
 // Most common name count algorithm
 
 var names = ["Bob", "Sally", "Bob", "Sam", "Michael", "Bob", "Michael"]
@@ -36,6 +35,7 @@ func mostCommonNameIn(array: [String]) -> String {
 
     return "Most common name: \(mostCommonName)"
 }
+
 
 print(mostCommonNameIn(array: names))
 
