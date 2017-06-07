@@ -21,6 +21,7 @@ class User {
     }
 }
 
+
 class Phone {
     let model: String
     weak var owner: User?
@@ -35,10 +36,11 @@ class Phone {
     }
 }
 
-
 do {
     let user1 = User(name: "John")
     let iPhone = Phone(model: "iPhone 6s Plus")
     user1.add(phone: iPhone)
 }
+
+
 

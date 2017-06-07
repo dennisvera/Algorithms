@@ -40,5 +40,4 @@ extension String {
     }
 }
 
-
 print(reverseWordsIn(sentence: sentence))

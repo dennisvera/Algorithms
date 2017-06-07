@@ -2,24 +2,22 @@
 
 import UIKit
 
-
 // Find most common character in sentence
 
 let sentence = "Oceans free-fall Waves interweave Patterns Dizzy space Sound ball Soft birthColours congeal'ectricity"
 
 func findMostCommonCharacterIn(sentence: String) -> String {
-    
     let formatedString = sentence.replacingOccurrences(of: " ", with: "")
     var characterDict = [String: Int]()
     var mostCommonCharacter = ""
     
     for char in formatedString.characters {
-        let char = String(char)
+        let character = String(char)
         
-        if characterDict[char] != nil {
-            characterDict[char] = characterDict[char]! + 1
+        if characterDict[character] != nil {
+            characterDict[character] = characterDict[character]! + 1
         } else {
-            characterDict[char] = 1
+            characterDict[character] = 1
         }
     }
     
@@ -30,6 +28,4 @@ func findMostCommonCharacterIn(sentence: String) -> String {
     return mostCommonCharacter
 }
 
-
 print(findMostCommonCharacterIn(sentence: sentence))
-
