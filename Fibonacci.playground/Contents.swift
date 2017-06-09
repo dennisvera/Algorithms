@@ -2,6 +2,7 @@
 
 import UIKit
 
+
 // Fibonacci sequence algorithm
 
 func fibonnacciFor(numSteps: Int) -> [Int] {
@@ -21,6 +22,7 @@ func fibonnacciFor(numSteps: Int) -> [Int] {
 }
 
 print(fibonnacciFor(numSteps: 10))
+
 
 
 // Fibonnacci recursive algorithm
