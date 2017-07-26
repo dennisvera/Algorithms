@@ -4,6 +4,7 @@ import UIKit
 
 // Challenge 1: Using your preferred language, please create an input string and then demonstrate how you would reverse it. For example: an input of "Programming is so much fun!" should return "!nuf hcum os si gnimmargorP". Do *not* use a built-in method, and be sure that your code is written clearly, in a way that enables others to easily understand your approach.
 
+
 // Solution 1
 
 let sentence = "Programming is so much fun!"
@@ -18,6 +19,7 @@ func reverseWordsIn(sentence: String) -> String {
 }
 
 print(reverseWordsIn(sentence: sentence))
+
 
 // Solution 2
 
@@ -34,6 +36,7 @@ print(reverseWordsWithReversedStringIn(sentence: sentence))
 
 
 // Challenge 2: Using your preferred language, please create an input array and then write a function to return the second smallest element in that array. For example: an input of {42, 8, 13, 79, 5, 2, 18} should return 5.
+
 
 // Solution 1
 
@@ -60,6 +63,7 @@ func getSecondSmallest(number: [Int]) -> Int {
 }
 
 print(getSecondSmallest(number: numbersArray))
+
 
 // Solution 2
 
