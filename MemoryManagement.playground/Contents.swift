@@ -2,6 +2,7 @@
 
 import UIKit
 
+
 class User {
     var name: String
     private(set) var phones: [Phone] = []
@@ -20,7 +21,6 @@ class User {
         phone.owner = self
     }
 }
-
 
 class Phone {
     let model: String
