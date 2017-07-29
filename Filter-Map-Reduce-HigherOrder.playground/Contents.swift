@@ -4,6 +4,7 @@ import UIKit
 
 // FOR-LOOP solutions
 
+
 // 1. filter into [3, 3, 3], then filter into [2, 4]
 
 let numbers = [1, 2, 3, 4, 3, 3]
@@ -20,6 +21,7 @@ for number in numbers {
 filteredThreeNum
 filteredDivisibleByTwoNums
 
+
 // 2. transform [1, 2, 3, 4] -> [2, 4, 6, 8] using map
 
 var multiplyByTwo = [Int]()
@@ -27,6 +29,7 @@ for number in [1, 2, 3, 4] {
 multiplyByTwo.append(number * 2)
 }
 multiplyByTwo
+
 
 // 3. sum [1, 2, 3, 4] -> 10 using reduce
 
@@ -47,10 +50,12 @@ let filteredDivbleByTwo = numbers.filter({return $0 % 2 == 0})
 filteredThree
 filteredDivbleByTwo
 
+
 // 2. transfrom [1, 2, 3, 4] -> [2, 4, 6, 8] using map
 
 let transformed = [1, 2, 3, 4].map({return $0 * 2})
 transformed
+
 
 // 3. sum [1, 2, 3, 4] -> 10 using reduce
 
