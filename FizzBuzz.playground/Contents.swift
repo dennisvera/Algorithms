@@ -1,10 +1,10 @@
 import UIKit
 
-// FizzBuzz Algorithm
+/// `Algorithm:` -  FizzBuzz
 
-// If a number is divisible by 3: "Fizz"
-// If a number is divisible by 5: "Buzz"
-// If a number is divisible by 3 and 5: "FizzBuzz"
+/// If a number is divisible by 3: "Fizz"
+/// If a number is divisible by 5: "Buzz"
+/// If a number is divisible by 3 and 5: "FizzBuzz"
 
 var numbers = [Int]()
 
