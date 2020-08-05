@@ -1,41 +1,36 @@
-//: Playground - noun: a place where people can play
-
 import UIKit
 
-// Most common name count algorithm
+// ALGORITHM: - Most Common Element (Name) in an Array
 
-var names = ["Bob", "Sally", "Bob", "Sam", "Michael", "Bob", "Michael"]
+let names = ["Bob", "Sally", "Bob", "Sam", "Michael", "Bob", "Sam", "Peter"]
 
 func mostCommonNameIn(array: [String]) -> String {
-
-    var nameCountDictionary = [String: Int]()
-
-    for name in array {
-        if let count = nameCountDictionary[name] {
-            nameCountDictionary[name] = count + 1
-        } else {
-            nameCountDictionary[name] = 1
-        }
+  var mostCommonName = ""
+  var nameCountDictionary = [String: Int]()
+  
+  for name in array {
+    if let count = nameCountDictionary[name] {
+      nameCountDictionary[name] = count + 1
+    } else {
+      nameCountDictionary[name] = 1
     }
+  }
+  
+  for key in nameCountDictionary.keys {
+    if mostCommonName == "" {
+      mostCommonName = key
+    } else {
+      let count = nameCountDictionary[key]!
 
-    var mostCommonName = ""
-
-    for key in nameCountDictionary.keys {
-        if mostCommonName == "" {
-            mostCommonName = key
-        } else {
-            let count = nameCountDictionary[key]!
-            if count > nameCountDictionary[mostCommonName]! {
-                mostCommonName = key
-            }
-        }
-
-        print("\(key): \(nameCountDictionary[key]!)")
+      if count > nameCountDictionary[mostCommonName]! {
+        mostCommonName = key
+      }
     }
-
-    return "Most common name: \(mostCommonName)"
+    
+    print("\(key): \(nameCountDictionary[key]!) ")
+  }
+  
+  return mostCommonName
 }
 
-
-print(mostCommonNameIn(array: names))
-
+print("\nMost Common Name: " + mostCommonNameIn(array: names))
