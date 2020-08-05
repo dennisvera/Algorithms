@@ -1,38 +1,34 @@
-//: Playground - noun: a place where people can play
-
 import UIKit
 
-// Fibonacci sequence algorithm
+/// `Algorithm:` -  Fibonacci sequence
 
-
-func fibonnacciFor(numSteps: Int) -> [Int] {
-    var sequence = [0, 1]
-    
-    if numSteps <= 1 {
-        return sequence
-    }
-    
-    for _ in 0...numSteps - 2 {
-        let first = sequence[sequence.count - 2]
-        let second = sequence.last!
-        sequence.append(first + second)
-    }
-    
+/// Fibonnaci sequence solution
+func fibonacciSequenceFor(number: Int) -> [Int] {
+  var sequence = [0, 1]
+  
+  if number <= 1 {
     return sequence
-}
-
-print(fibonnacciFor(numSteps: 10))
-
-// Fibonnacci recursive algorithm
-
-func fibonnacciRecursionFor(numSteps: Int, first: Int, second: Int) -> [Int] {
-    if numSteps == 0 {
-        return []
-    }
+  }
+  
+  for _ in 0...number - 2 {
+    let first = sequence[sequence.count - 2]
+    let second = sequence.last!
     
-    return [first + second] + fibonnacciRecursionFor(numSteps: numSteps - 1, first: second, second: first + second)
+    sequence.append(first + second)
+  }
+  
+  return sequence
 }
 
-print([0, 1] + fibonnacciRecursionFor(numSteps: 9, first: 0, second: 1))
+fibonacciSequenceFor(number: 10)
 
+/// Fibonnaci sequence wirth recursion solution
+func fibonnacciRecursionFor(number: Int, first: Int, second: Int) -> [Int] {
+  if number == 0 {
+    return []
+  }
+  
+  return [first + second] + fibonnacciRecursionFor(number: number - 1, first: second, second: first + second)
+}
 
+[0, 1] + fibonnacciRecursionFor(number: 9, first: 0, second: 1)
