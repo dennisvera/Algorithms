@@ -1,43 +1,43 @@
-//: Playground - noun: a place where people can play
-
 import UIKit
 
-// Reverse every other word algorithm
+/// `Algorithm:` -  Reverse every other word and remove all vowels  in a given string.
 
-let sentence = "Lets start today by completing a very interesting challenge"
+let textSample = "Lets start today by completing a very interesting challenge"
 
-func reverseWordsIn(sentence: String) -> String {
+func reverseWordsIn(text: String) -> String {
+  let allWords = text.components(separatedBy: " ")
+  var newText = ""
+  
+  for index in 0...allWords.count - 1 {
+    let word = allWords[index]
     
-    let allWords = sentence.components(separatedBy: " ")
-    var newSentence = ""
-    
-    for index in 0...allWords.count - 1 {
-        let word = allWords[index]
-        if newSentence != "" {
-            newSentence += " "
-        }
-        if index % 2 == 1 {
-            let reverseWord = String(word.characters.reversed())
-            newSentence += reverseWord.stringByRemovingVowels()
-        } else {
-            newSentence += word.stringByRemovingVowels()
-        }
+    if newText != "" {
+      newText += " "
     }
     
-    return newSentence
+    if index % 2 == 1 {
+      let reversedWord = String(word.reversed())
+      newText += reversedWord.removeVowels()
+    } else {
+      newText += word
+    }
+  }
+  
+  return newText
 }
 
-// Remove vowels in sentence algorithm
+print(reverseWordsIn(text: textSample))
 
 extension String {
-    func stringByRemovingVowels() -> String {
-        var newWord = self
-        for vowel in ["a", "e", "i", "o", "u"] {
-            newWord = newWord.replacingOccurrences(of: vowel, with: "")
-        }
-        
-        return newWord
+  
+  /// Helper Method for removing all vowels in a string
+  func removeVowels() -> String {
+    var newWord = self
+    
+    for vowel in ["a", "e", "i", "o", "u"] {
+      newWord = newWord.replacingOccurrences(of: vowel, with: "")
     }
+    
+    return newWord
+  }
 }
-
-print(reverseWordsIn(sentence: sentence))
