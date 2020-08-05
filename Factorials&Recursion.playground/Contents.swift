@@ -1,12 +1,12 @@
 import UIKit
 
-// Factorial Algorithm
+/// `Algorithm:` -  Factorial Algorithm
 
-// A factorial solution
+/// A factorial solution
 func factorialOf(value: UInt) -> UInt {
   var product: UInt = 1
   
-  // The factorial value of 0 is 1
+  /// The factorial value of 0 is 1
   if value == 0 {
     return 1
   }
@@ -20,9 +20,9 @@ func factorialOf(value: UInt) -> UInt {
 //print(factorialOf(value: 5))
 
 
-// A reccursive factorial solution
+/// A reccursive factorial solution
 func recursiveFactorialof(value: UInt) -> UInt {
-  // The factorial value of 0 is 1
+  /// The factorial value of 0 is 1
   if value == 0 {
     return 1
   }

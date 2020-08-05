@@ -1,9 +1,8 @@
 import UIKit
 
-// Binary Search Algorithm
+/// `Algorithm:` - Binary Search Algorithm
 
-// Given an array of numbers, return True if the searched number exists in the array,
-// return False otherwise
+/// Given an array of numbers, return True if the searched number exists in the array, otherwise return False.
 
 var numbers = [Int]()
 
@@ -11,7 +10,7 @@ for i in 1...100 {
   numbers.append(i)
 }
 
-// A binary search approach.
+/// A binary search approach.
 func binarySearchFor(searchValue: Int, array: [Int]) -> Bool {
   var leftIndex = 0
   var rightIndex = array.count - 1
@@ -40,7 +39,7 @@ func binarySearchFor(searchValue: Int, array: [Int]) -> Bool {
 
 print(binarySearchFor(searchValue: 101, array: numbers))
 
-// A linear search approach. Slower when the array contains a lot of numbers.
+/// A linear search approach. Slower when the array contains a lot of numbers.
 func linearSearchFor(searchValue: Int, array: [Int]) -> Bool {
   for number in array {
     if number == searchValue {
