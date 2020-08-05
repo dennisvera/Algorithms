@@ -1,26 +1,28 @@
-//: Playground - noun: a place where people can play
-
 import UIKit
 
-// FizzBuzz algorithm 
+// FizzBuzz Algorithm
 
-var oneHundred = [Int]()
+// If a number is divisible by 3: "Fizz"
+// If a number is divisible by 5: "Buzz"
+// If a number is divisible by 3 and 5: "FizzBuzz"
+
+var numbers = [Int]()
+
 for i in 1...100 {
-    oneHundred.append(i)
+  numbers.append(i)
 }
 
-for num in oneHundred {
-    if num % 3 == 0 && num % 5 == 0 {
-       print("\(num) fizzbuzz")
-        
-    } else if num % 3 == 0 {
-        print("\(num) fizz")
+for number in numbers {
+  if number % 3 == 0 && number % 5 == 0 {
+    print("FizzBuzz")
     
-    } else if num % 5 == 0 {
-        print("\(num) buzz")
-        
-    } else {
-        print(num)
-    }
+  } else if number % 3 == 0 {
+    print("Fizz")
     
+  } else if number % 5 == 0 {
+    print("Buzz")
+    
+  } else {
+    print(number)
+  }
 }
