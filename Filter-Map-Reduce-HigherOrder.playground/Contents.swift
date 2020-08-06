@@ -1,65 +1,63 @@
-//: Playground - noun: a place where people can play
-
 import UIKit
 
-// FOR-LOOP solutions
+/// `Algorithm:` - Higher Order Functions
 
+// For-Loops Solutions
 
-// 1. filter into [3, 3, 3], then filter into [2, 4]
+// 1. Filter numbers array into [3, 3, 3], then filter into [2, 4]
 
 let numbers = [1, 2, 3, 4, 3, 3]
-var filteredThreeNum = [Int]()
-var filteredDivisibleByTwoNums = [Int]()
+
+var threeNumberArray = [Int]()
+var evenNumbersArray = [Int]()
 
 for number in numbers {
-    if number == 3 {
-        filteredThreeNum.append(number)
-    } else if number % 2 == 0 {
-        filteredDivisibleByTwoNums.append(number)
-    }
+  if number == 3 {
+    threeNumberArray.append(number)
+  } else if number % 2 == 0 {
+    evenNumbersArray.append(number)
+  }
 }
-filteredThreeNum
-filteredDivisibleByTwoNums
 
+threeNumberArray
+evenNumbersArray
 
-// 2. transform [1, 2, 3, 4] -> [2, 4, 6, 8] using map
+// 2. Transform [1, 2, 3, 4] -> [2, 4, 6, 8]
 
-var multiplyByTwo = [Int]()
+var transformedArray = [Int]()
 for number in [1, 2, 3, 4] {
-multiplyByTwo.append(number * 2)
+  transformedArray.append(number * 2)
 }
-multiplyByTwo
 
+transformedArray
 
-// 3. sum [1, 2, 3, 4] -> 10 using reduce
+// 3. Sum [1, 2, 3, 4] -> 10 using reduce
 
-var sumElements = 0
+var sumArray = 0
 for number in [1, 2, 3, 4] {
-    sumElements += number
+  sumArray += number
 }
-sumElements
 
+sumArray
 
-// HIGHER ORDER solutions
-// * The foor-loop solutions create "var" variables that are MUTABLE. This is less SAFE than the Higher Order solutions that cannot be mutated, they use "let" variables.
+// Higher Order Functions Solutions
+/// The foor-loop solutions create variables (var) that are mutable. Higher order functions can use constants (let), they are un-mutable, safer.
 
-// 1. filter into [3, 3, 3], then filter into [2, 4]
+// 1. Filter numbers array into [3, 3, 3], then filter into [2, 4]
 
-let filteredThree = numbers.filter({return $0 == 3})
-let filteredDivbleByTwo = numbers.filter({return $0 % 2 == 0})
-filteredThree
-filteredDivbleByTwo
+let threeArrayHigher = numbers.filter({ return $0 == 3 })
+let evenArrayHigher = numbers.filter({ return $0 % 2 == 0 })
 
+threeArrayHigher
+evenArrayHigher
 
-// 2. transfrom [1, 2, 3, 4] -> [2, 4, 6, 8] using map
+// 2. Transfrom [1, 2, 3, 4] -> [2, 4, 6, 8] using map
+let transformedArrayHigher = [1, 2, 3, 4].map({ return $0 * 2 })
 
-let transformed = [1, 2, 3, 4].map({return $0 * 2})
-transformed
+transformedArrayHigher
 
+// 3. Sum [1, 2, 3, 4] -> 10 using reduce
 
-// 3. sum [1, 2, 3, 4] -> 10 using reduce
+let sumArrayHigher = [1, 2, 3, 4].reduce(0, { sum, number in sum + number })
 
-let sum = [1, 2, 3, 4].reduce(0, {sum, number in sum + number})
-sum
-
-
+sumArrayHigher
