@@ -5,6 +5,7 @@ import UIKit
 class Person {
   
   let name: String
+  var apartment: Apartment?
   
   init(name: String) {
     self.name = name
@@ -18,19 +19,24 @@ class Person {
 class Apartment {
   
   let number: Int
-  /// Setting the tenant property to `weak` protects against retain cycles. Weak will not raise the `reference count`
+  /// Setting the tenant property to `weak` protects against retain cycles when the Person and Apartment  are binded. Weak will not raise the `reference count`
   weak var tenant: Person?
   
   init(number: Int) {
     self.number = number
   }
+  
+  deinit {
+    print("Apartment \(number) is being deinitialized.")
+  }
 }
 
 var bob: Person? = Person(name: "Bob")
-let apartment = Apartment(number: 666)
+var apartment: Apartment? = Apartment(number: 666)
 
-/// Setting the tenant to Bob  without tenant  being `weak` property would create a  retain cycle.
-/// The solution to make sure you do not create a reatin cycle is to set one of the variables to weak.
-apartment.tenant = bob
+/// If the tenant  variable was not  set to `weak`, this would create a retain cycle. Person <> Apartment would not be deallocated / released as they are tight together.
+apartment?.tenant = bob
+bob?.apartment = apartment
 
 bob = nil
+apartment = nil
